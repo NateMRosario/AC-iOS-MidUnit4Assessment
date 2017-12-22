@@ -10,13 +10,18 @@ import Foundation
 import UIKit
 
 class CardCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var cellImageView: UIImageView!
     
     func configureCell(with card: Card) {
-        print(card)
         self.cellLabel.text = CardAPIClient.manager.cardValues(value: card.value).description
+        self.cellImageView.image = nil
         ImageAPIClient.manager.loadImage(from: card.image, completionHandler: {self.cellImageView.image = $0; self.cellImageView.setNeedsLayout()}, errorHandler: {print($0)})
-        
+    }
+    func configureHistoryCell(with card: DataModel.History) {
+        self.cellLabel.text = CardAPIClient.manager.cardValues(value: card.value).description
+        self.cellImageView.image = nil
+        ImageAPIClient.manager.loadImage(from: card.image, completionHandler: {self.cellImageView.image = $0; self.cellImageView.setNeedsLayout()}, errorHandler: {print($0)})
     }
 }

@@ -12,6 +12,7 @@ class GameViewController: UIViewController {
 
     var countIndex = 0
     var winningNum = 30
+        
     var currentHand = 0 {
         didSet {
             if currentHand == winningNum {
@@ -30,7 +31,7 @@ class GameViewController: UIViewController {
             if cards.count >= 1 {
                 currentHand += CardAPIClient.manager.cardValues(value: cards[countIndex].value)
                 countIndex += 1
-                currentValueLabel.text = currentHand.description
+                currentValueLabel.text = "Current Hand: \(currentHand.description)"
             }
         }
     }
@@ -46,10 +47,17 @@ class GameViewController: UIViewController {
         loadCards()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if let myDefault = UserDefaultHelper.manager.getWinningNum() {
+            winningNum = myDefault
+            rulesLabel.text = "Get up to \(winningNum) without going over!"
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
-        rulesLabel.text = "Get up to 30 without going over!"
+        rulesLabel.text = "Get up to \(winningNum) without going over!"
         let nib = UINib(nibName: "CardCollectionViewCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "CardCell")
         loadDeck()
@@ -59,7 +67,7 @@ class GameViewController: UIViewController {
         cards = [Card]()
         currentHand = 0
         countIndex = 0
-        currentValueLabel.text = currentHand.description
+        currentValueLabel.text = "Current Hand: \(currentHand.description)"
     }
     func loadDeck() {
         CardAPIClient.manager.getDeck(completion: {self.deckOfCards = $0}, errorHandler: {print($0)})
@@ -71,6 +79,7 @@ class GameViewController: UIViewController {
     func alertController(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "New Game", style: .cancel) {(action:UIAlertAction!) in
+            DataModel.shared.addCard(cards: self.cards, handCount: self.currentHand)
             self.resetGame()
     })
         self.present(alert, animated: true, completion: nil)
