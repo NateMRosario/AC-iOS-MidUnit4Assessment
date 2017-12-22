@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		545F2AB41FEC2752007EBECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F2AB31FEC2752007EBECB /* AppDelegate.swift */; };
-		545F2AB61FEC2752007EBECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F2AB51FEC2752007EBECB /* ViewController.swift */; };
+		545F2AB61FEC2752007EBECB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F2AB51FEC2752007EBECB /* GameViewController.swift */; };
 		545F2AB91FEC2752007EBECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545F2AB71FEC2752007EBECB /* Main.storyboard */; };
 		545F2ABB1FEC2752007EBECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545F2ABA1FEC2752007EBECB /* Assets.xcassets */; };
 		545F2ABE1FEC2752007EBECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545F2ABC1FEC2752007EBECB /* LaunchScreen.storyboard */; };
+		818B09E31FED597000DE614C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818B09E21FED597000DE614C /* HistoryViewController.swift */; };
+		818B09E51FED5A7C00DE614C /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 818B09E41FED5A7C00DE614C /* CardCollectionViewCell.xib */; };
+		818B09E71FED5B4900DE614C /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818B09E61FED5B4900DE614C /* CardCell.swift */; };
+		818B09E91FED5E7C00DE614C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818B09E81FED5E7C00DE614C /* NetworkHelper.swift */; };
+		818B09EB1FED5EA000DE614C /* ImageAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818B09EA1FED5EA000DE614C /* ImageAPIClient.swift */; };
+		818B09F01FED623300DE614C /* CardsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818B09EF1FED623300DE614C /* CardsAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		545F2AB01FEC2752007EBECB /* AC-iOS-MidUnit4Assessment-StudentVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC-iOS-MidUnit4Assessment-StudentVersion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		545F2AB31FEC2752007EBECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		545F2AB51FEC2752007EBECB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		545F2AB51FEC2752007EBECB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		545F2AB81FEC2752007EBECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		545F2ABA1FEC2752007EBECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		545F2ABD1FEC2752007EBECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		545F2ABF1FEC2752007EBECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		818B09E21FED597000DE614C /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		818B09E41FED5A7C00DE614C /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		818B09E61FED5B4900DE614C /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		818B09E81FED5E7C00DE614C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		818B09EA1FED5EA000DE614C /* ImageAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIClient.swift; sourceTree = "<group>"; };
+		818B09EF1FED623300DE614C /* CardsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,52 @@
 		545F2AB21FEC2752007EBECB /* AC-iOS-MidUnit4Assessment-StudentVersion */ = {
 			isa = PBXGroup;
 			children = (
-				545F2AB31FEC2752007EBECB /* AppDelegate.swift */,
-				545F2AB51FEC2752007EBECB /* ViewController.swift */,
+				818B09E11FED592400DE614C /* Supoorting Files */,
+				818B09ED1FED5EC600DE614C /* ViewControllers */,
+				818B09EC1FED5EC000DE614C /* Models */,
+				818B09EE1FED5EF100DE614C /* Views */,
 				545F2AB71FEC2752007EBECB /* Main.storyboard */,
-				545F2ABA1FEC2752007EBECB /* Assets.xcassets */,
-				545F2ABC1FEC2752007EBECB /* LaunchScreen.storyboard */,
 				545F2ABF1FEC2752007EBECB /* Info.plist */,
 			);
 			path = "AC-iOS-MidUnit4Assessment-StudentVersion";
+			sourceTree = "<group>";
+		};
+		818B09E11FED592400DE614C /* Supoorting Files */ = {
+			isa = PBXGroup;
+			children = (
+				545F2AB31FEC2752007EBECB /* AppDelegate.swift */,
+				545F2ABA1FEC2752007EBECB /* Assets.xcassets */,
+				545F2ABC1FEC2752007EBECB /* LaunchScreen.storyboard */,
+			);
+			path = "Supoorting Files";
+			sourceTree = "<group>";
+		};
+		818B09EC1FED5EC000DE614C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				818B09E81FED5E7C00DE614C /* NetworkHelper.swift */,
+				818B09EA1FED5EA000DE614C /* ImageAPIClient.swift */,
+				818B09EF1FED623300DE614C /* CardsAPIClient.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		818B09ED1FED5EC600DE614C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				545F2AB51FEC2752007EBECB /* GameViewController.swift */,
+				818B09E21FED597000DE614C /* HistoryViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		818B09EE1FED5EF100DE614C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				818B09E41FED5A7C00DE614C /* CardCollectionViewCell.xib */,
+				818B09E61FED5B4900DE614C /* CardCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +175,7 @@
 			files = (
 				545F2ABE1FEC2752007EBECB /* LaunchScreen.storyboard in Resources */,
 				545F2ABB1FEC2752007EBECB /* Assets.xcassets in Resources */,
+				818B09E51FED5A7C00DE614C /* CardCollectionViewCell.xib in Resources */,
 				545F2AB91FEC2752007EBECB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +187,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				545F2AB61FEC2752007EBECB /* ViewController.swift in Sources */,
+				818B09E31FED597000DE614C /* HistoryViewController.swift in Sources */,
+				545F2AB61FEC2752007EBECB /* GameViewController.swift in Sources */,
+				818B09E91FED5E7C00DE614C /* NetworkHelper.swift in Sources */,
+				818B09EB1FED5EA000DE614C /* ImageAPIClient.swift in Sources */,
 				545F2AB41FEC2752007EBECB /* AppDelegate.swift in Sources */,
+				818B09E71FED5B4900DE614C /* CardCell.swift in Sources */,
+				818B09F01FED623300DE614C /* CardsAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
